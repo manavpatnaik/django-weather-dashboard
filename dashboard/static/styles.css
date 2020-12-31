@@ -1,0 +1,12 @@
+#sidepanel {
+    min-height: 95vh;
+    background: linear-gradient(45deg, #fff, #8893ff);
+}
+
+#sidepanel p {
+    font-size: 1.5rem;
+}
+
+.btn, input {
+    border-radius: 20px !important;
+}
