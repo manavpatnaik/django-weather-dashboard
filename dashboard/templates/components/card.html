@@ -1,3 +1,4 @@
+{% if weather_data %}
 <div>
     <div class="card m-auto" style="width: 30rem;">
         <table class="table">
@@ -5,19 +6,19 @@
                 <tr>
                     <td class="border-bottom border-right">
                         <div>
-                            <h1 class="display-2">20&deg; C</h1>
-                            <p><strong>20&deg;C - 30&deg;C</strong></p>
+                            <h1 class="display-2">{{ weather_data.temp }}&deg; C</h1>
+                            <p><strong>{{ weather_data.temp_min }}&deg;C - {{ weather_data.temp_max }}&deg;C</strong></p>
                         </div>
                     </td>
                     <td>
                         <div>
-                            <p>Coimbatore<small class="text-muted">(IN)</small></p>
+                            <p>{{weather_data.city_name}}<small class="text-muted">({{weather_data.country_name}})</small></p>
                         </div>
                         <div>
-                            <strong><small>Lattitude: 28.7778</small></strong>
+                            <strong><small>Lattitude: {{weather_data.lat}}</small></strong>
                         </div>
                         <div>
-                            <strong><small>Longitude: 76.7778</small></strong>
+                            <strong><small>Longitude: {{weather_data.lon}}</small></strong>
                         </div>
                     </td>
                 </tr>
@@ -28,22 +29,22 @@
                         <tbody>
                             <tr>
                                 <td>
-                                    <p><strong>Weather: </strong> Cloudy</p>
+                                    <p><strong>Weather: </strong> {{weather_data.weather}}</p>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <p><strong>Pressure: </strong> 10<small class="text-muted"> Pa</small></p>
+                                    <p><strong>Pressure: </strong> {{weather_data.pressure}}<small class="text-muted"> Pa</small></p>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <p><strong>Humidity: </strong> 123</p>
+                                    <p><strong>Humidity: </strong> {{weather_data.humidity}}</p>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <p><strong>Wind Speed: </strong> 30 <small class="text-muted">Km/hr</small></p>
+                                    <p><strong>Wind Speed: </strong> {{weather_data.wind_speed}} <small class="text-muted">Km/hr</small></p>
                                 </td>
                             </tr>
                         </tbody>
@@ -53,3 +54,10 @@
         </table>
     </div>
 </div>
+{% else %}
+<div class="card m-auto" style="width: 30rem;">
+    <div class="card-body">
+        <h3>Data Not found</h3>
+    </div>
+</div>
+{% endif %}
