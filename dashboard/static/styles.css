@@ -1,5 +1,5 @@
 #sidepanel {
-    min-height: 95vh;
+    min-height: 50vh;
     background: linear-gradient(45deg, #fff, #1f69a9) !important;
 }
 
@@ -15,4 +15,10 @@
     #sidepanel {
         min-height: 94vh;
     }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }

@@ -120,3 +120,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'static'
+
+OWM_API_KEY = '6d37ed00a79179857e7f18eaaeef43fe'
