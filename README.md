@@ -1,6 +1,14 @@
 # Weather Dashboard
 
+Link: [Weather Dashboard](https://serene-bastion-14573.herokuapp.com/)
+
 #### A simple weather dashboard built with Django
+
+![Home](img/Screenshot_1.png)
+
+#### Search for your city
+
+![Search](img/Screenshot_2.png)
 
 To run on your local machine:
 
